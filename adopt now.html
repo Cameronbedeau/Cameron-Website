@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Now - Pawsitive Connections</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Adopt Your New Best Friend</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="adoptable-pets.html" class="nav-link">Adoptable Pets</a></li>
+                <li><a href="success-stories.html" class="nav-link">Success Stories</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="adopt-form-section">
+            <h2>Fill Out Your Adoption Application</h2>
+            <p>Please complete the form below, and we’ll get back to you about adopting your chosen pet.</p>
+            
+            <form action="submit-adoption.html" method="post" class="adopt-form">
+                <!-- Pet Name Field -->
+                <label for="pet-name">Pet Name:</label>
+                <input type="text" id="pet-name" name="pet-name" placeholder="Enter the name of the pet you wish to adopt" required>
+                
+                <!-- Your Name -->
+                <label for="adopter-name">Your Full Name:</label>
+                <input type="text" id="adopter-name" name="adopter-name" placeholder="Enter your full name" required>
+                
+                <!-- Contact Info -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <!-- Address -->
+                <label for="address">Your Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+
+                <!-- Questions Section -->
+                <label for="experience">Tell us about your experience with pets:</label>
+                <textarea id="experience" name="experience" rows="4" placeholder="Share your experience with pets or why you want to adopt" required></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pawsitive Connections. All rights reserved.</p>
+        <ul>
+            <li><a href="#" class="social-link">Facebook</a></li>
+            <li><a href="#" class="social-link">Instagram</a></li>
+            <li><a href="#" class="social-link">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
