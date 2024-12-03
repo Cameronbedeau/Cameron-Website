@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsitive Connections - Adoptable Pets</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const adoptButtons = document.querySelectorAll(".adopt-btn");
+
+            adoptButtons.forEach(button => {
+                button.addEventListener("click", event => {
+                    event.preventDefault(); // Prevent default behavior
+                    const petCard = button.closest(".pet-card");
+                    const petName = petCard.getAttribute("data-name");
+                    if (petName) {
+                        window.location.href = `adopt-now.html?pet=${encodeURIComponent(petName)}`;
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Pawsitive Connections</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="adoptable-pets.html" class="nav-link">Adoptable Pets</a></li>
+                <li><a href="success-stories.html" class="nav-link">Success Stories</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="volunteer-opportunities.html" class="nav-link">Volunteer</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Pets that are up for adoption.</h2>
+
+        <!-- Pet Cards -->
+        <div class="pet-card" data-name="Trent">
+            <img src="images/dolphin.png" alt="Dolphin named Trent" title="Meet Trent">
+            <h3>Trent</h3>
+            <p>A lovely dolphin looking for a home. Must be a trained professional to handle.</p>
+            <a href="#" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card" data-name="Ajay">
+            <img src="images/lion.png" alt="Lion named Ajay" title="Meet Ajay">
+            <h3>Ajay</h3>
+            <p>A cute lion ready to be adopted. He’s friendly and playful.</p>
+            <a href="#" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card" data-name="Haiser">
+            <img src="images/haiser1.png" alt="Cat named Haiser" title="Meet Haiser">
+            <h3>Haiser</h3>
+            <p>A charming cat looking for a loving home. Great for families and calm environments.</p>
+            <a href="#" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card" data-name="Slick">
+            <img src="images/slick.png" alt="Monkey named Slick" title="Meet Slick">
+            <h3>Slick</h3>
+            <p>A playful monkey who loves climbing and interacting with people. Perfect for an adventurous adopter!</p>
+            <a href="#" class="adopt-btn">Adopt Now</a>
+        </div>
+
+        <div class="pet-card" data-name="Pebbles">
+            <img src="images/husky.png" alt="Pebbles" title="Meet Pebbles">
+            <h3>Pebbles (Legacy Pet)</h3>
+            <p>An adorable dog looking for a forever home!</p>
+            <a href="#" class="adopt-btn">Adopt Now</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Follow us on social media!</p>
+        <ul>
+            <li><a href="#" class="social-link">Facebook</a></li>
+            <li><a href="#" class="social-link">Instagram</a></li>
+            <li><a href="#" class="social-link">Twitter</a></li>
+        </ul>
+        <button id="theme-toggle">Toggle Theme</button>
+    </footer>
+</body>
+</html>
+
